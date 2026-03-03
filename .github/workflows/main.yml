@@ -28,8 +28,7 @@ jobs:
       # just do a normal install which updates the lockfile; commit the lockfile afterwards.
       run: npm install
       
-    - name: Install Notion SDK
-      run: npm install @notionhq/client
+    # Notion SDK is now listed in package.json, regular install covers it
       
     - name: Print directory structure for debugging
       run: find . -type f -not -path "*/node_modules/*" -not -path "*/.git/*" | sort
