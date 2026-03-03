@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/userModel');
+import jwt from 'jsonwebtoken';
+// User model not needed here; token only stores id
 
 const authenticate = async (req, res, next) => {
   try {
@@ -23,4 +23,4 @@ const authenticate = async (req, res, next) => {
   }
 };
 
-module.exports = { authenticate };
+export { authenticate };

@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Story = require('../models/storyModel');
-const { authenticate } = require('../middleware/authMiddleware');
+import Story from '../models/storyModel.js';
+import { authenticate } from '../middleware/authMiddleware.js';
 
 // Get all public stories
 router.get('/public', async (req, res) => {
@@ -167,4 +167,4 @@ router.delete('/:id', authenticate, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

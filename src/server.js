@@ -1,12 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 
 // Import routes
-const storyRoutes = require('./routes/storyRoutes');
-const userRoutes = require('./routes/userRoutes');
+import storyRoutes from './routes/storyRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+
+// initialize environment variables
+dotenv.config();
 
 // Initialize express
 const app = express();

@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const User = require('../models/userModel');
-const jwt = require('jsonwebtoken');
-const { authenticate } = require('../middleware/authMiddleware');
+import User from '../models/userModel.js';
+import jwt from 'jsonwebtoken';
+import { authenticate } from '../middleware/authMiddleware.js';
 
 // Register a new user
 router.post('/register', async (req, res) => {
@@ -116,4 +116,4 @@ router.put('/profile', authenticate, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
